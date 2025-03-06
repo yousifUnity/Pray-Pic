@@ -12,8 +12,19 @@ export default function Navigation() {
       setIsScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    
+    // Prevent scrolling when mobile menu is open
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      document.body.style.overflow = 'auto'
+    }
+  }, [isMobileMenuOpen])
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -90,48 +101,61 @@ export default function Navigation() {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Fixed Position */}
       <div 
-        className={`fixed inset-0 bg-white/95 backdrop-blur-lg transform transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } md:hidden`}
+        className={`fixed inset-0 bg-white/95 backdrop-blur-lg transform transition-all duration-300 ease-in-out ${
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        } md:hidden overflow-hidden`}
+        style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
       >
-        <div className="flex flex-col items-center justify-center min-h-screen space-y-8 p-4">
+        <div className="flex flex-col items-center justify-center h-full space-y-6 p-4">
+          <div className="w-16 h-1 bg-gray-200 rounded-full mb-8"></div>
+          
+          <Link
+            href="/"
+            className="text-xl font-medium text-gray-800 hover:text-primary-green transition-colors w-full text-center py-3 border-b border-gray-100"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </Link>
           <Link
             href="/about"
-            className="text-2xl font-medium text-gray-800 hover:text-primary-green transition-colors"
+            className="text-xl font-medium text-gray-800 hover:text-primary-green transition-colors w-full text-center py-3 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className="text-2xl font-medium text-gray-800 hover:text-primary-green transition-colors"
+            className="text-xl font-medium text-gray-800 hover:text-primary-green transition-colors w-full text-center py-3 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </Link>
           <Link
             href="/privacy"
-            className="text-2xl font-medium text-gray-800 hover:text-primary-green transition-colors"
+            className="text-xl font-medium text-gray-800 hover:text-primary-green transition-colors w-full text-center py-3 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Privacy
           </Link>
           <Link
             href="/terms"
-            className="text-2xl font-medium text-gray-800 hover:text-primary-green transition-colors"
+            className="text-xl font-medium text-gray-800 hover:text-primary-green transition-colors w-full text-center py-3 border-b border-gray-100"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Terms
           </Link>
-          <Link
-            href="#"
-            className="bg-gradient-to-r from-primary-green to-green-700 text-white px-8 py-3 rounded-full text-lg font-medium hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-green-200"
-            onClick={() => setIsMobileMenuOpen(false)}
-          >
-            Download App
-          </Link>
+          
+          <div className="mt-8 w-full px-6">
+            <Link
+              href="#"
+              className="bg-gradient-to-r from-primary-green to-green-700 text-white py-3 rounded-xl text-lg font-medium hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-green-200 w-full flex items-center justify-center"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Download App
+            </Link>
+          </div>
         </div>
       </div>
     </nav>
