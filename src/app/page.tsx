@@ -126,7 +126,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
-                        <span className="text-xs font-medium text-green-700 dark:text-green-300">AS</span>
+                        <span className="text-xs font-medium text-green-700 dark:text-green-300">IA</span>
                       </div>
                       <span className="text-sm font-medium">Ibrahim A.</span>
                     </div>
@@ -134,7 +134,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1">
-                      <span className="text-sm font-medium">Prayed Asr</span>
+                      <span className="text-sm font-medium">has Prayed Asr</span>
                       <span className="text-xs text-green-600 dark:text-green-400">on time</span>
                     </div>
                     <div className="flex gap-1">
@@ -149,7 +149,7 @@ export default function Home() {
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
-                        <span className="text-xs font-medium text-red-700 dark:text-red-300">UA</span>
+                        <span className="text-xs font-medium text-red-700 dark:text-red-300">UT</span>
                       </div>
                       <span className="text-sm font-medium">Ubaida T.</span>
                     </div>
@@ -157,7 +157,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1">
-                      <span className="text-sm font-medium">Missed Isha</span>
+                      <span className="text-sm font-medium">Isha prayer has been </span>
                       <span className="text-xs text-red-600 dark:text-red-400">missed</span>
                     </div>
                     <div className="flex gap-1">
@@ -204,7 +204,7 @@ export default function Home() {
                       <div className="w-16 h-16 rounded-full p-0.5 bg-gradient-to-r from-primary-green to-primary-gold">
                         <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
                           <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span className="text-xs font-medium">AM</span>
+                            <span className="text-xs font-medium">A</span>
                           </div>
                         </div>
                       </div>
@@ -215,22 +215,22 @@ export default function Home() {
                       <div className="w-16 h-16 rounded-full p-0.5 bg-gray-300 dark:bg-gray-600">
                         <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
                           <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span className="text-xs font-medium">KH</span>
+                            <span className="text-xs font-medium">Y</span>
                           </div>
                         </div>
                       </div>
-                      <span className="text-xs mt-1">Khalid</span>
+                      <span className="text-xs mt-1">Yahea</span>
                     </div>
                     
                     <div className="flex flex-col items-center">
                       <div className="w-16 h-16 rounded-full p-0.5 bg-gray-300 dark:bg-gray-600">
                         <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
                           <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span className="text-xs font-medium">FA</span>
+                            <span className="text-xs font-medium">H</span>
                           </div>
                         </div>
                       </div>
-                      <span className="text-xs mt-1">Fatima</span>
+                      <span className="text-xs mt-1">Hassan</span>
                     </div>
                   </div>
                   
@@ -245,7 +245,7 @@ export default function Home() {
                             </svg>
                           </div>
                           <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
-                            Share your Fajr prayer moment
+                             Its Asr time, 43 Min remaining to take a picture before Maghrib!
                           </p>
                         </div>
                       </div>
