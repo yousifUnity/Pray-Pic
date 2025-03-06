@@ -178,7 +178,7 @@ export default function Home() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Prayer Moments</h3>
+                <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Prayer Stories</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Share your prayer journey by posting photos to your story. Inspire others with beautiful prayer spaces and moments of devotion.
                 </p>
@@ -192,7 +192,7 @@ export default function Home() {
                       <div className="w-16 h-16 rounded-full p-0.5 bg-gradient-to-r from-primary-green to-primary-gold">
                         <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
                           <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span className="text-xs font-medium">Fajr</span>
+                            <span className="text-xs font-medium">You</span>
                           </div>
                         </div>
                       </div>
