@@ -17,52 +17,52 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth dark">
-      <body className={`${inter.className} antialiased bg-gray-950 text-gray-100 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300`}>
+      <body className={`${inter.className} antialiased dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300`}>
         <Navigation />
         <main className="pt-16">
           {children}
         </main>
-        <footer className="bg-gray-900 border-t border-gray-800">
+        <footer className="dark:bg-gray-900 dark:border-gray-800 border-t">
           <div className="container mx-auto px-4 py-8 md:py-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="col-span-2 md:col-span-1 space-y-4">
-                <h3 className="font-semibold text-gray-100">PrayPic</h3>
-                <p className="text-sm text-gray-400">
+                <h3 className="font-semibold dark:text-gray-100">PrayPic</h3>
+                <p className="text-sm dark:text-gray-400">
                   Connect through prayer, build habits together.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-100 mb-4">Company</h3>
+                <h3 className="font-semibold dark:text-gray-100 mb-4">Company</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/about" className="text-sm text-gray-400 hover:text-primary-green transition-colors">
+                    <a href="/about" className="text-sm dark:text-gray-400 hover:text-primary-green transition-colors">
                       About Us
                     </a>
                   </li>
                   <li>
-                    <a href="/contact" className="text-sm text-gray-400 hover:text-primary-green transition-colors">
+                    <a href="/contact" className="text-sm dark:text-gray-400 hover:text-primary-green transition-colors">
                       Contact
                     </a>
                   </li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-100 mb-4">Legal</h3>
+                <h3 className="font-semibold dark:text-gray-100 mb-4">Legal</h3>
                 <ul className="space-y-2">
                   <li>
-                    <a href="/privacy" className="text-sm text-gray-400 hover:text-primary-green transition-colors">
+                    <a href="/privacy" className="text-sm dark:text-gray-400 hover:text-primary-green transition-colors">
                       Privacy Policy
                     </a>
                   </li>
                   <li>
-                    <a href="/terms" className="text-sm text-gray-400 hover:text-primary-green transition-colors">
+                    <a href="/terms" className="text-sm dark:text-gray-400 hover:text-primary-green transition-colors">
                       Terms of Service
                     </a>
                   </li>
                 </ul>
               </div>
               <div className="col-span-2 md:col-span-1">
-                <h3 className="font-semibold text-gray-100 mb-4">Download</h3>
+                <h3 className="font-semibold dark:text-gray-100 mb-4">Download</h3>
                 <div className="flex flex-col sm:flex-row gap-3">
                   <a
                     href="https://apps.apple.com"
@@ -91,8 +91,8 @@ export default function RootLayout({
                 </div>
               </div>
             </div>
-            <div className="mt-8 pt-8 border-t border-gray-800">
-              <p className="text-center text-sm text-gray-400">
+            <div className="mt-8 pt-8 border-t dark:border-gray-800">
+              <p className="text-center text-sm dark:text-gray-400">
                 © {new Date().getFullYear()} PrayPic. All rights reserved.
               </p>
             </div>
@@ -101,4 +101,4 @@ export default function RootLayout({
       </body>
     </html>
   )
-}
+} 
