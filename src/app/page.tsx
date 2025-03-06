@@ -122,15 +122,15 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Track if you and your friends prayed on time or missed prayers. Receive gentle reminders and encouragement to maintain consistency in your worship.
                 </p>
-                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md mb-3">
                   <div className="flex items-center justify-between mb-3">
                     <div className="flex items-center gap-2">
                       <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
                         <span className="text-xs font-medium text-green-700 dark:text-green-300">AS</span>
                       </div>
-                      <span className="text-sm font-medium">Shams A.</span>
+                      <span className="text-sm font-medium">Ibrahim A.</span>
                     </div>
-                    <span className="text-xs text-gray-500">Today</span>
+                    <span className="text-xs text-gray-500">5 Hours Ago</span>
                   </div>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-1">
@@ -143,10 +143,34 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+                
+                {/* Second box showing Ubaida missed Isha */}
+                <div className="p-4 bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-red-100 dark:bg-red-900 rounded-full flex items-center justify-center">
+                        <span className="text-xs font-medium text-red-700 dark:text-red-300">UA</span>
+                      </div>
+                      <span className="text-sm font-medium">Ubaida T.</span>
+                    </div>
+                    <span className="text-xs text-gray-500">1 Hour Ago</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1">
+                      <span className="text-sm font-medium">Missed Isha</span>
+                      <span className="text-xs text-red-600 dark:text-red-400">missed</span>
+                    </div>
+                    <div className="flex gap-1">
+                      <span className="text-sm">😔</span>
+                      <span className="text-sm">🤲</span>
+                      <span className="text-sm">💪</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             
-            {/* Feature 2 */}
+            {/* Feature 2 - Prayer Moments (Stories) */}
             <div className="flex flex-col md:flex-row gap-6 items-start">
               <div className="flex-shrink-0 w-16 h-16 bg-primary-gold/10 dark:bg-primary-gold/20 rounded-2xl flex items-center justify-center">
                 <svg className="w-8 h-8 text-primary-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -156,20 +180,104 @@ export default function Home() {
               <div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-800 dark:text-white">Prayer Moments</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
-                  Share beautiful moments from your prayer experiences. Post pictures of masjids you visit or serene prayer spaces to inspire others.
+                  Share your prayer journey by posting photos to your story. Inspire others with beautiful prayer spaces and moments of devotion.
                 </p>
-                <div className="grid grid-cols-3 gap-2">
-                  <div className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-1 left-1 text-white text-xs">Masjid</div>
+                
+                {/* Stories UI */}
+                <div className="relative mb-2">
+                  {/* Stories circles at top */}
+                  <div className="flex space-x-4 mb-4 pb-2 overflow-x-auto">
+                    {/* Active story with green ring */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full p-0.5 bg-gradient-to-r from-primary-green to-primary-gold">
+                        <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
+                          <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                            <span className="text-xs font-medium">Fajr</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-xs mt-1">You</span>
+                    </div>
+                    
+                    {/* Other stories */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full p-0.5 bg-gradient-to-r from-primary-green to-primary-gold">
+                        <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
+                          <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                            <span className="text-xs font-medium">AM</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-xs mt-1">Ahmed</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full p-0.5 bg-gray-300 dark:bg-gray-600">
+                        <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
+                          <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                            <span className="text-xs font-medium">KH</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-xs mt-1">Khalid</span>
+                    </div>
+                    
+                    <div className="flex flex-col items-center">
+                      <div className="w-16 h-16 rounded-full p-0.5 bg-gray-300 dark:bg-gray-600">
+                        <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
+                          <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
+                            <span className="text-xs font-medium">FA</span>
+                          </div>
+                        </div>
+                      </div>
+                      <span className="text-xs mt-1">Fatima</span>
+                    </div>
                   </div>
-                  <div className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-1 left-1 text-white text-xs">Sunset</div>
-                  </div>
-                  <div className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-lg overflow-hidden relative">
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    <div className="absolute bottom-1 left-1 text-white text-xs">Quran</div>
+                  
+                  {/* Story preview */}
+                  <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden">
+                    <div className="h-48 bg-gray-200 dark:bg-gray-700 relative">
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <div className="text-center p-4">
+                          <div className="w-12 h-12 mx-auto bg-primary-green/20 rounded-full flex items-center justify-center mb-2">
+                            <svg className="w-6 h-6 text-primary-green" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                            </svg>
+                          </div>
+                          <p className="text-sm font-medium text-gray-600 dark:text-gray-300">
+                            Share your Fajr prayer moment
+                          </p>
+                        </div>
+                      </div>
+                      
+                      {/* Story progress bar */}
+                      <div className="absolute top-0 left-0 right-0 flex space-x-1 p-2">
+                        <div className="h-1 bg-white bg-opacity-50 rounded-full flex-1"></div>
+                        <div className="h-1 bg-white rounded-full flex-1"></div>
+                        <div className="h-1 bg-white bg-opacity-50 rounded-full flex-1"></div>
+                        <div className="h-1 bg-white bg-opacity-50 rounded-full flex-1"></div>
+                        <div className="h-1 bg-white bg-opacity-50 rounded-full flex-1"></div>
+                      </div>
+                      
+                      {/* User info */}
+                      <div className="absolute top-4 left-4 flex items-center">
+                        <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center text-xs font-medium">
+                          You
+                        </div>
+                        <span className="ml-2 text-sm font-medium text-white">2h ago</span>
+                      </div>
+                    </div>
+                    
+                    {/* Story interactions */}
+                    <div className="p-3 flex justify-between items-center">
+                      <div className="flex items-center gap-2">
+                        <span className="text-sm">❤️ 12</span>
+                        <span className="text-sm">🤲 8</span>
+                      </div>
+                      <button className="text-xs bg-primary-green/10 text-primary-green px-3 py-1 rounded-full">
+                        View All
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
