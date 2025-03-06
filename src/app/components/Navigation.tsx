@@ -7,6 +7,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [showDownloadOptions, setShowDownloadOptions] = useState(false)
+  const [isDarkMode, setIsDarkMode] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,10 +36,28 @@ export default function Navigation() {
     setShowDownloadOptions(!showDownloadOptions)
   }
 
+  const toggleTheme = () => {
+    const newDarkMode = !isDarkMode
+    setIsDarkMode(newDarkMode)
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }
+
+  // Initialize dark mode on component mount
+  useEffect(() => {
+    // Check if dark mode is already set
+    const isDark = document.documentElement.classList.contains('dark')
+    setIsDarkMode(isDark)
+  }, [])
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'dark:bg-gray-900/90 dark:backdrop-blur-md dark:border-b dark:border-gray-800 shadow-sm' 
+        ? 'dark:bg-gray-900/90 dark:backdrop-blur-md dark:border-b dark:border-gray-800 bg-white/90 backdrop-blur-md shadow-sm' 
         : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-4">
@@ -85,8 +104,34 @@ export default function Navigation() {
             </Link>
           </div>
 
-          {/* Desktop Download Button */}
+          {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4 relative">
+            {/* Theme Toggle Button */}
+            <button 
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {isDarkMode ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              )}
+            </button>
+
+            {/* Download Button */}
             <button
               onClick={toggleDownloadOptions}
               className="bg-gradient-to-r from-primary-green to-primary-gold text-white px-4 py-2 rounded-full text-sm font-medium hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary-gold/20 flex items-center gap-2"
@@ -134,69 +179,97 @@ export default function Navigation() {
             )}
           </div>
 
-          {/* Mobile Menu Button */}
-          <button 
-            onClick={toggleMobileMenu}
-            className="md:hidden p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-green dark:focus:ring-primary-gold z-50"
-            aria-label="Toggle mobile menu"
-          >
-            <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-0.5' : '-translate-y-1'}`}></span>
-              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
-              <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-0.5' : 'translate-y-1'}`}></span>
-            </div>
-          </button>
+          {/* Mobile Menu Button and Theme Toggle */}
+          <div className="md:hidden flex items-center space-x-2">
+            {/* Theme Toggle Button */}
+            <button 
+              onClick={toggleTheme}
+              className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              aria-label={isDarkMode ? "Switch to light mode" : "Switch to dark mode"}
+            >
+              {isDarkMode ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="5"></circle>
+                  <line x1="12" y1="1" x2="12" y2="3"></line>
+                  <line x1="12" y1="21" x2="12" y2="23"></line>
+                  <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                  <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                  <line x1="1" y1="12" x2="3" y2="12"></line>
+                  <line x1="21" y1="12" x2="23" y2="12"></line>
+                  <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                  <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+              )}
+            </button>
+
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={toggleMobileMenu}
+              className="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary-green dark:focus:ring-primary-gold z-50"
+              aria-label="Toggle mobile menu"
+            >
+              <div className="w-6 h-6 flex flex-col justify-center items-center">
+                <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-0.5' : '-translate-y-1'}`}></span>
+                <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></span>
+                <span className={`block w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-0.5' : 'translate-y-1'}`}></span>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu Overlay - Fixed Position */}
       <div 
-        className={`fixed inset-0 dark:bg-gray-900/95 backdrop-blur-lg transform transition-all duration-300 ease-in-out ${
+        className={`fixed inset-0 dark:bg-gray-900/95 bg-white/95 backdrop-blur-lg transform transition-all duration-300 ease-in-out ${
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         } md:hidden overflow-hidden`}
         style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 p-4">
-          <div className="w-16 h-1 bg-gray-700 rounded-full mb-8"></div>
+          <div className="w-16 h-1 bg-gray-300 dark:bg-gray-700 rounded-full mb-8"></div>
           
           <Link
             href="/"
-            className="text-xl font-medium dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b dark:border-gray-800"
+            className="text-xl font-medium text-gray-800 dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b border-gray-200 dark:border-gray-800"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="text-xl font-medium dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b dark:border-gray-800"
+            className="text-xl font-medium text-gray-800 dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b border-gray-200 dark:border-gray-800"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className="text-xl font-medium dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b dark:border-gray-800"
+            className="text-xl font-medium text-gray-800 dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b border-gray-200 dark:border-gray-800"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </Link>
           <Link
             href="/privacy"
-            className="text-xl font-medium dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b dark:border-gray-800"
+            className="text-xl font-medium text-gray-800 dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b border-gray-200 dark:border-gray-800"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Privacy
           </Link>
           <Link
             href="/terms"
-            className="text-xl font-medium dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b dark:border-gray-800"
+            className="text-xl font-medium text-gray-800 dark:text-gray-100 hover:text-primary-green dark:hover:text-primary-gold transition-colors w-full text-center py-3 border-b border-gray-200 dark:border-gray-800"
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Terms
           </Link>
           
           <div className="mt-8 w-full px-6 space-y-3">
-            <p className="text-center text-gray-400 mb-2">Download our app</p>
+            <p className="text-center text-gray-500 dark:text-gray-400 mb-2">Download our app</p>
             <a
               href="https://apps.apple.com"
               className="bg-black text-white py-3 rounded-xl text-lg font-medium hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-primary-green/20 w-full flex items-center justify-center gap-3"
@@ -228,4 +301,4 @@ export default function Navigation() {
       </div>
     </nav>
   )
-} 
+}
