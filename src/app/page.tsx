@@ -5,6 +5,7 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <div className="overflow-hidden">
+      <meta name="description" content="Your custom description for the homepage." />
       {/* Hero Section */}
       <section className="relative min-h-[100svh] flex items-center justify-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.05),rgba(234,179,8,0.05))] dark:bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),rgba(234,179,8,0.05))]"></div>
