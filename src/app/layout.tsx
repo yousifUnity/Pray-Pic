@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth dark">
+       <head>
+        <meta name="description" content="Track and share your daily prayers with friends" />
+       </head>
       <body className={`${inter.className} antialiased dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300`}>
         <Navigation />
         <main className="pt-16">
