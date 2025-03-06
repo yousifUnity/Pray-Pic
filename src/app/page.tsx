@@ -11,11 +11,12 @@ export default function Home() {
         <div className="container mx-auto px-4 py-16 md:py-32 text-center relative">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="inline-block text-primary-green animate-slide-in-left">Salah</span>{' '}
-              <span className="inline-block text-gray-800 dark:text-gray-100 animate-slide-in-right">Companion</span>
+              <span className="inline-block text-primary-green animate-slide-in-left">Pray</span>{' '}
+              <span className="inline-block text-gray-800 dark:text-gray-100 animate-slide-in-right">Together.</span>{' '}
+              <span className="inline-block text-primary-gold animate-fade-in" style={{ animationDelay: '0.5s' }}>Stay Accountable.</span>
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 md:mb-12 max-w-3xl mx-auto animate-fade-in">
-              Track your daily prayers, share moments of <span className="text-primary-gold font-medium">Khushu</span>, and build meaningful <span className="text-primary-green font-medium">Ummah</span> connections.
+              Capture your daily prayers, track your progress, and strengthen your connection with the <span className="text-primary-green font-medium">Ummah</span>.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
               <Link
@@ -127,7 +128,7 @@ export default function Home() {
                       <div className="w-8 h-8 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center">
                         <span className="text-xs font-medium text-green-700 dark:text-green-300">AS</span>
                       </div>
-                      <span className="text-sm font-medium">Ahmed S.</span>
+                      <span className="text-sm font-medium">Shams A.</span>
                     </div>
                     <span className="text-xs text-gray-500">Today</span>
                   </div>
@@ -268,4 +269,4 @@ export default function Home() {
       </section>
     </div>
   )
-}
+} 
