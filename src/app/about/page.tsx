@@ -104,7 +104,7 @@ export default function AboutPage() {
               </div>
               <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
                 <p className="text-gray-600 dark:text-gray-300 italic mb-4">
-                  "PrayPic keeps me accountable and motivated with its unique photo-based prayer tracking. The Your Heart feature is a great visual reminder, and the streaks & achievements make it fun! I love the Announcements Tab for seeing friends’ progress, and the Menstruation Pause Mode is a thoughtful addition. Super easy to use—highly recommend!"
+                  "PrayPic keeps me accountable and motivated with its unique photo-based prayer tracking. The Your Heart feature is a great visual reminder, and the streaks & achievements make it fun! I love the Announcements Tab for seeing friends’ progress. Super easy to use—highly recommend!"
                 </p>
                 <p className="font-medium dark:text-gray-200">- Yahea Al Ani</p>
               </div>
