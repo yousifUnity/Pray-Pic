@@ -226,11 +226,11 @@ export default function Home() {
                       <div className="w-16 h-16 rounded-full p-0.5 bg-gray-300 dark:bg-gray-600">
                         <div className="w-full h-full rounded-full border-2 border-white dark:border-gray-800 overflow-hidden">
                           <div className="w-full h-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-                            <span className="text-xs font-medium">H</span>
+                            <span className="text-xs font-medium">S</span>
                           </div>
                         </div>
                       </div>
-                      <span className="text-xs mt-1">Hassan</span>
+                      <span className="text-xs mt-1">Shams</span>
                     </div>
                   </div>
                   
