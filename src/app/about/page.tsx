@@ -35,7 +35,7 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="md:w-2/3">
-                <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Yousif Mahmood</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Yousif Aldhahi</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   As a Data Engineer with a passion for technology and faith, I created PrayPic with the mission to help
                   people stay connected through prayers. My background in data engineering has helped me create an
