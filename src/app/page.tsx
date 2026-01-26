@@ -19,7 +19,7 @@ export default function Home() {
             <div className="mb-8 relative">
               <div className="inline-block relative">
                 <span className="bg-gradient-to-r from-primary-green/10 to-primary-gold/10 dark:from-primary-green/20 dark:to-primary-gold/20 px-6 py-2 rounded-full text-lg sm:text-xl font-medium text-gray-800 dark:text-gray-200 backdrop-blur-sm">
-                  Coming Soon 2025
+                  Launching Before Ramadan 2026
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-primary-green rounded-full animate-ping"></span>
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-primary-green rounded-full"></span>
                 </span>
