@@ -76,24 +76,55 @@ export default function TermsOfService() {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">8. Changes to Terms</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">8. Dispute Resolution</h2>
+              <div className="space-y-4">
+                <p>
+                  <strong>Governing Law:</strong> These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which PrayPic operates, without regard to its conflict of law provisions.
+                </p>
+                <p>
+                  <strong>Dispute Resolution Process:</strong> If you have any concerns or disputes regarding these Terms or the Service, please contact us first at <a href="mailto:legal@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">legal@praypic.com</a>. We will attempt to resolve any disputes through good faith negotiations.
+                </p>
+                <p>
+                  <strong>Informal Resolution:</strong> Before filing a claim, you agree to try to resolve the dispute informally by contacting us. We will try to resolve the dispute within 30 days of receiving your notice.
+                </p>
+                <p>
+                  <strong>Binding Arbitration:</strong> If we cannot resolve a dispute informally, you agree that any dispute arising out of or relating to these Terms or the Service will be resolved through binding arbitration in accordance with the rules of a recognized arbitration organization, rather than in court. You waive your right to a jury trial and to participate in a class-action lawsuit or class-wide arbitration.
+                </p>
+                <p>
+                  <strong>Exceptions:</strong> Notwithstanding the above, you may bring claims in small claims court if your claims qualify, and either party may seek injunctive relief in any court of competent jurisdiction to protect intellectual property rights or to prevent irreparable harm.
+                </p>
+                <p>
+                  <strong>Jurisdiction:</strong> For any disputes not subject to arbitration, you agree to submit to the personal and exclusive jurisdiction of the courts located in the jurisdiction where PrayPic operates.
+                </p>
+              </div>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">9. Changes to Terms</h2>
               <p>
                 We reserve the right to modify or replace these Terms at any time. We will provide
                 notice of any changes by posting the new Terms on this page.
               </p>
-              <p className="mt-4">
-                Last Updated: March 5, 2024
-              </p>
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">9. Contact Us</h2>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">10. Contact Us</h2>
               <p>
                 If you have any questions about these Terms, please contact us at:
                 <br />
                 <a href="mailto:legal@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">
                   legal@praypic.com
                 </a>
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-white">Changes to This Policy</h2>
+              <p>
+                We may update our Terms of Service from time to time. We will notify you of any changes by posting the new Terms on this page and updating the "Last Updated" date.
+              </p>
+              <p className="mt-4">
+                Last Updated: January 28, 2026
               </p>
             </section>
           </div>
