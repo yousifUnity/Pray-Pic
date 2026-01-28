@@ -89,7 +89,7 @@ export default function PrivacyPolicy() {
                 posting the new Privacy Policy on this page and updating the "Last Updated" date.
               </p>
               <p className="mt-4">
-                Last Updated: March 5, 2024
+                Last Updated: January 28, 2026
               </p>
             </section>
           </div>
