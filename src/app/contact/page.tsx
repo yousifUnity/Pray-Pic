@@ -11,11 +11,30 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically handle the form submission
-    console.log('Form submitted:', formData)
-    // Reset form
+    // Open user's email client with pre-filled message to support@praypic.com
+    const subject = encodeURIComponent(
+      `[PrayPic Contact] ${formData.subject ? `${getSubjectLabel(formData.subject)} - ` : ''}${formData.name || 'Contact form'}`
+    )
+    const body = encodeURIComponent(
+      `${formData.message}\n\n---\nFrom: ${formData.name}\nReply-To: ${formData.email}`
+    )
+    const mailtoUrl = `mailto:support@praypic.com?subject=${subject}&body=${body}`
+    window.location.href = mailtoUrl
     setFormData({ name: '', email: '', subject: '', message: '' })
-    alert('Thank you for your message. We will get back to you soon!')
+    // Show confirmation after a short delay (mail client may have opened)
+    setTimeout(() => {
+      alert('Your email client will open with your message. Send the email to contact us at support@praypic.com.')
+    }, 300)
+  }
+
+  function getSubjectLabel(value: string): string {
+    const labels: Record<string, string> = {
+      general: 'General Inquiry',
+      support: 'Technical Support',
+      feedback: 'Feedback',
+      other: 'Other',
+    }
+    return labels[value] || value
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
