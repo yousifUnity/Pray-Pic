@@ -132,7 +132,7 @@ export default function PrivacyPolicy() {
                 If you have any questions about this Privacy Policy, please contact us at:
                 <br />
                 <a href="mailto:privacy@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">
-                  privacy@praypic.com
+                  support@praypic.com
                 </a>
               </p>
             </section>
