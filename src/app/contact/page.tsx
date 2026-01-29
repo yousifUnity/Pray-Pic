@@ -32,9 +32,6 @@ export default function Contact() {
                 >
                   support@praypic.com
                 </a>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                  Opens your email app with subject &quot;{MAILTO_SUBJECT}&quot; and a short greeting ready to fill in.
-                </p>
               </div>
 
               <div>
