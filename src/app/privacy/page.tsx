@@ -101,7 +101,7 @@ export default function PrivacyPolicy() {
                 <li><strong>Legal Requirements:</strong> We may retain certain information longer if required by law, such as for tax or legal compliance purposes.</li>
               </ul>
               <p className="mt-4">
-                If you wish to delete your account or request deletion of specific data, please contact us at <a href="mailto:privacy@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">privacy@praypic.com</a>.
+                If you wish to delete your account or request deletion of specific data, please contact us at <a href="mailto:privacy@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">support@praypic.com</a>.
               </p>
             </section>
 
