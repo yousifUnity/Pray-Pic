@@ -82,7 +82,7 @@ export default function TermsOfService() {
                   <strong>Governing Law:</strong> These Terms shall be governed by and construed in accordance with the laws of the jurisdiction in which PrayPic operates, without regard to its conflict of law provisions.
                 </p>
                 <p>
-                  <strong>Dispute Resolution Process:</strong> If you have any concerns or disputes regarding these Terms or the Service, please contact us first at <a href="mailto:legal@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">legal@praypic.com</a>. We will attempt to resolve any disputes through good faith negotiations.
+                  <strong>Dispute Resolution Process:</strong> If you have any concerns or disputes regarding these Terms or the Service, please contact us first at <a href="mailto:support@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">support@praypic.com</a>. We will attempt to resolve any disputes through good faith negotiations.
                 </p>
                 <p>
                   <strong>Informal Resolution:</strong> Before filing a claim, you agree to try to resolve the dispute informally by contacting us. We will try to resolve the dispute within 30 days of receiving your notice.
@@ -112,8 +112,8 @@ export default function TermsOfService() {
               <p>
                 If you have any questions about these Terms, please contact us at:
                 <br />
-                <a href="mailto:legal@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">
-                  legal@praypic.com
+                <a href="mailto:support@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">
+                  support@praypic.com
                 </a>
               </p>
             </section>
