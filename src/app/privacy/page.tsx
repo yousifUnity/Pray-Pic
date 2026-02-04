@@ -34,6 +34,13 @@ export default function PrivacyPolicy() {
                   <li>Device information</li>
                   <li>Log data</li>
                 </ul>
+
+                <h3 className="text-xl font-medium text-gray-800 dark:text-white">Premium / In-App Purchase Information</h3>
+                <p className="mb-2">If you purchase our "Remove Ads" option (one-time or subscription), we store only your premium status so we can hide ads in the app. We do not collect or store your payment card details; all payments are processed by Apple (on iOS) or Google (on Android).</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Whether you have an active premium (remove ads) status</li>
+                  <li>For subscriptions, the end date of your current billing period (so we know when access continues or ends)</li>
+                </ul>
               </div>
             </section>
 
@@ -85,6 +92,16 @@ export default function PrivacyPolicy() {
                   You can opt out of personalized ads in your device settings. 
                   Google's privacy policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary-green dark:text-primary-gold hover:underline">https://policies.google.com/privacy</a>
                 </li>
+                <li>
+                  <strong>RevenueCat:</strong> We use RevenueCat to manage in-app purchases and subscriptions (e.g. "Remove Ads Forever" and "Remove Ads" monthly subscription). 
+                  RevenueCat receives your app user ID and purchase/entitlement status from the app stores (Apple, Google) so we can correctly enable or disable ads in the app. 
+                  RevenueCat does not receive your payment details; payment is handled entirely by Apple or Google. 
+                  RevenueCat's privacy policy: <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener noreferrer" className="text-primary-green dark:text-primary-gold hover:underline">https://www.revenuecat.com/privacy</a>
+                </li>
+                <li>
+                  <strong>Apple / Google:</strong> When you make an in-app purchase, payment is processed by Apple (App Store) or Google (Play Store). 
+                  We do not receive or store your card or payment details; only the fact that you have an active purchase and (for subscriptions) when the current period ends.
+                </li>
               </ul>
             </section>
 
@@ -97,11 +114,12 @@ export default function PrivacyPolicy() {
                 <li><strong>Account Data:</strong> We retain your account information (email, profile data) for as long as your account is active. If you delete your account, we will delete your personal information within 30 days, except where we are required to retain it for legal purposes.</li>
                 <li><strong>Prayer Data:</strong> Your prayer tracking data and announcements are retained while your account is active. You can delete individual prayer records at any time.</li>
                 <li><strong>Photos and Stories:</strong> Photos and stories you share are retained until you delete them or delete your account. Stories automatically expire after 24 hours.</li>
+                <li><strong>Premium Status:</strong> We retain your premium (remove ads) status and subscription end date for as long as your account is active, so we can correctly show or hide ads. If you cancel a subscription or it expires, we update this data accordingly.</li>
                 <li><strong>Error Logs:</strong> Error tracking data is retained for up to 90 days to help us identify and fix issues.</li>
                 <li><strong>Legal Requirements:</strong> We may retain certain information longer if required by law, such as for tax or legal compliance purposes.</li>
               </ul>
               <p className="mt-4">
-                If you wish to delete your account or request deletion of specific data, please contact us at <a href="mailto:privacy@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">support@praypic.com</a>.
+                If you wish to delete your account or request deletion of specific data, please contact us at <a href="mailto:support@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">support@praypic.com</a>.
               </p>
             </section>
 
@@ -131,7 +149,7 @@ export default function PrivacyPolicy() {
               <p>
                 If you have any questions about this Privacy Policy, please contact us at:
                 <br />
-                <a href="mailto:privacy@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">
+                <a href="mailto:support@praypic.com" className="text-primary-green dark:text-primary-gold hover:underline">
                   support@praypic.com
                 </a>
               </p>
@@ -144,7 +162,7 @@ export default function PrivacyPolicy() {
                 posting the new Privacy Policy on this page and updating the "Last Updated" date.
               </p>
               <p className="mt-4">
-                Last Updated: January 28, 2026
+                Last Updated: February 4, 2026
               </p>
             </section>
           </div>
