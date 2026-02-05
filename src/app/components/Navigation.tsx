@@ -64,13 +64,12 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 z-50">
-            <div className="relative w-8 h-8 overflow-hidden rounded-full bg-gradient-to-br from-primary-green to-primary-gold flex items-center justify-center">
+            <div className="relative w-8 h-8 rounded-full overflow-hidden">
               <Image
                 src="/Logo_SVG.svg"
                 alt="PrayPic"
-                width={32}
-                height={32}
-                className="w-7 h-7 object-contain"
+                fill
+                className="object-cover p-1"
               />
             </div>
             <span className="font-bold text-xl bg-gradient-to-r from-primary-green via-primary-gold to-primary-green bg-clip-text text-transparent">PrayPic</span>
