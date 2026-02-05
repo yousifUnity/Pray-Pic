@@ -66,7 +66,7 @@ export default function Navigation() {
           <Link href="/" className="flex items-center space-x-2 z-50">
             <div className="relative w-8 h-8 overflow-hidden rounded-full bg-gradient-to-br from-primary-green to-primary-gold flex items-center justify-center">
               <Image
-                src="/app-logo.png"
+                src="/Logo_SVG.svg"
                 alt="PrayPic"
                 width={32}
                 height={32}
