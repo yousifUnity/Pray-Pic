@@ -1,0 +1,4 @@
+# App-ads.txt for PrayPic (AdMob)
+# Must be served at https://praypic.com/app-ads.txt (root of your domain)
+# Get your exact line from AdMob: Apps → app-ads.txt → How to set up → Copy snippet
+google.com, pub-3100699493602682, DIRECT, f08c47fec0942fa0
