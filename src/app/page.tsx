@@ -365,7 +365,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
-              href="https://apps.apple.com"
+              href="https://apps.apple.com/ua/app/praypic/id6758682894"
               className="w-full sm:w-auto bg-gradient-to-r from-gray-900 to-black text-white px-6 sm:px-8 py-4 rounded-xl hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg hover:shadow-gray-200 dark:hover:shadow-gray-800 inline-flex items-center justify-center space-x-2"
             >
               <svg className="w-6 sm:w-8 h-6 sm:h-8" viewBox="0 0 24 24" fill="currentColor">
